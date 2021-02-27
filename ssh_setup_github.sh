@@ -48,3 +48,9 @@ fi
 unset env
 
 ###########################################################
+
+#Create public key from private key
+ssh-keygen -y -f bj_cs_ec2_ssh_key.pem >bj_cs_ec2_ssh_key.pub
+
+#Login using ssh with private key
+ssh ec2-user@13.126.187.210 -i bj_cs_ec2_ssh_key.pem
